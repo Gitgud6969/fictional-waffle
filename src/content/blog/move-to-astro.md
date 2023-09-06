@@ -1,6 +1,6 @@
 ---
 layout: ../layout/BlogPostLayout.astro
-url: /project-showcase-astro-tailwind
+url: project-showcase-astro-tailwind
 title: Astro.js and Tailwind
 description: Project Showcase - Rebuilding My Portfolio with Astro.js and Tailwind
 ---
