@@ -1,13 +1,14 @@
 ---
-import { Container } from "../../components/utils/Container";
+import Container from "../../components/utils/Container.astro";
 
 const { frontmatter } = Astro.props;
 ---
 
-<Container as="article" className="mt-24 sm:mt-32 lg:mt-40">
-  <header class="mx-auto flex max-w-5xl flex-col text-center">
+<Container className="mt-24 sm:mt-32 lg:mt-40">
+  <div class="mx-auto flex max-w-5xl flex-col text-center">
     <h1
       class="mt-6 font-display text-5xl font-medium tracking-tight text-slate-300 [text-wrap:balance] sm:text-6xl"
+      transition:name=`title ${frontmatter.url}`
     >
       {frontmatter.title}
     </h1>
@@ -18,10 +19,12 @@ const { frontmatter } = Astro.props;
       {frontmatter.date?.toLocaleDateString("de-de")}
     </time>
     <p class="mt-6 text-sm font-semibold text-slate-300">by Simon Lehmann</p>
-  </header>
-  <article
-    class="[&>*]:mx-auto [&>*]:max-w-3xl [&>:first-child]:!mt-0 [&>:last-child]:!mb-0"
+  </div>
+  <div
+    class="[&>*]:mx-auto [&>*]:max-w-3xl [&>:first-child]:!mt-0 [&>:last-child]:!mb-0  my-24 sm:my-32 lg:my-40"
   >
-    <slot />
-  </article>
+    <div class="prose-slate lg:prose-xl text-slate-300">
+      <slot />
+    </div>
+  </div>
 </Container>

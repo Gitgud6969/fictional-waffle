@@ -1,12 +1,12 @@
 ---
 layout: ../layout/BlogPostLayout.astro
-url: hello-world
+url: /hello-world
 title: Astro in brief
 author: Himanshu
 description: Find out what makes Astro awesome!
 ---
 
-# 1. Efficiency is Hard to Measure
+## 1. Efficiency is Hard to Measure
 
 Although almost every practical measure of our productivity decreased significantly after returning to the office, as a management team we felt this incredible uptick in energy. We realised that there is an intangible benefit to seeing everyone’s screen at all times, that isn’t easily measurable in numbers.
 
