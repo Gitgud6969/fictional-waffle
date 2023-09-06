@@ -10,3 +10,15 @@
   font-stretch: 75% 125%;
   src: url("/fonts/Mona-Sans.var.woff2") format("woff2");
 }
+@layer utilities {
+  @variants responsive {
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  }
+}

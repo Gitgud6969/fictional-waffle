@@ -1,7 +1,7 @@
 import clsx from "clsx";
-import { Container, type ContainerProps } from "./Container";
+import Container from "./Container.astro";
 
-export interface SectionIntroProps extends Omit<ContainerProps, "children"> {
+export interface SectionIntroProps {
   eyebrow?: string;
   title: string;
   children?: React.ReactNode;
@@ -13,7 +13,7 @@ export interface SectionIntroProps extends Omit<ContainerProps, "children"> {
 export function SectionIntro(props: SectionIntroProps) {
   const { eyebrow, title, children, smaller, invert, ...rest } = props;
   return (
-    <Container {...rest}>
+    <Container>
       <h2>
         {eyebrow && (
           <>

@@ -1,14 +1,25 @@
 ---
+import Anchor from "../../components/utils/Anchor";
 import Container from "../../components/utils/Container.astro";
 
 const { frontmatter } = Astro.props;
 ---
 
 <Container className="mt-24 sm:mt-32 lg:mt-40">
-  <div class="mx-auto flex max-w-5xl flex-col text-center">
+  <div class="pt-16 relative before:absolute after:absolute before:left-0 before:top-0 before:h-px before:w-6 after:left-8 after:right-0 after:top-0 after:h-px before:bg-slate-300 after:bg-slate-300/10" transition:name={`blog ${frontmatter.title} box`}>
+    <Anchor    href={`/blog`}
+    aria-label={`Back to blog overview`}
+    transition:name={`blog ${frontmatter.title} button`}
+  >
+ <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+</svg>
+
+  </Anchor>
+  <div class="mx-auto flex max-w-5xl flex-col text-center" >
     <h1
       class="mt-6 font-display text-5xl font-medium tracking-tight text-slate-300 [text-wrap:balance] sm:text-6xl"
-      transition:name=`title ${frontmatter.url}`
+      transition:name={`blog ${frontmatter.title} title`}
     >
       {frontmatter.title}
     </h1>
@@ -18,7 +29,7 @@ const { frontmatter } = Astro.props;
     >
       {frontmatter.date?.toLocaleDateString("de-de")}
     </time>
-    <p class="mt-6 text-sm font-semibold text-slate-300">by Simon Lehmann</p>
+    <p class="mt-6 text-sm font-semibold text-slate-600">by Simon Lehmann</p>
   </div>
   <div
     class="[&>*]:mx-auto [&>*]:max-w-3xl [&>:first-child]:!mt-0 [&>:last-child]:!mb-0  my-24 sm:my-32 lg:my-40"
@@ -26,5 +37,6 @@ const { frontmatter } = Astro.props;
     <div class="prose-slate lg:prose-xl text-slate-300">
       <slot />
     </div>
+  </div>
   </div>
 </Container>
