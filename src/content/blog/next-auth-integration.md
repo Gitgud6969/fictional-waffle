@@ -3,6 +3,7 @@ layout: ../layout/BlogPostLayout.astro
 url: next-auth-integration
 title: Next-auth integration
 description: Implementing next-auth in a nextjs project using an external api with jwt token authentication
+date: "2023-09-09"
 ---
 
 ## Introduction

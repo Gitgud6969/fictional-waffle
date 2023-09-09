@@ -25,9 +25,9 @@ const { frontmatter } = Astro.props;
     </h1>
     <time
       datetime={frontmatter.date}
-      class="order-first text-sm text-slate-300"
+      class="order-first text-sm text-slate-500"
     >
-      {frontmatter.date?.toLocaleDateString("de-de")}
+      {new Date(frontmatter.date)?.toLocaleDateString()}
     </time>
     <p class="mt-6 text-sm font-semibold text-slate-600">by Simon Lehmann</p>
   </div>

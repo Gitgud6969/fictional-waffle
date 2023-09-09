@@ -3,6 +3,7 @@ layout: ../layout/BlogPostLayout.astro
 url: project-showcase-astro-tailwind
 title: Astro.js and Tailwind
 description: Project Showcase - Building this here with Astro.js and Tailwind
+date: "2023-09-06"
 ---
 
 ## Introduction: Setting the Stage
