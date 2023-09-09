@@ -6,11 +6,11 @@ const posts = await Astro.glob('/src/content/blog/*.md');
 ---
 
 <Layout title="Blog">
-   <Container className=" [&>*:last-child]:mb-24 sm:mt-32 lg:mt-40">
-    <div class="space-y-24 lg:space-y-16">
+   <Container className="mt-24 mb-24 sm:mt-32 lg:mt-40">
+    <div class="space-y-24 lg:space-y-32 [&>*:last-child]:mb-24">
       {posts.map((article) => (
           <article>
-            <div class={`pt-16 relative before:absolute after:absolute before:left-0 before:top-0 before:h-px before:w-6 after:left-8 after:right-0 after:top-0 after:h-px before:bg-slate-300 after:bg-slate-300/10`}  transition:name={`blog ${article.frontmatter.title} box`}>
+            <div class="pt-16 relative before:absolute after:absolute before:left-0 before:top-0 before:h-px before:w-6 after:left-8 after:right-0 after:top-0 after:h-px before:bg-slate-300 after:bg-slate-300/10"  transition:name={`blog ${article.frontmatter.title} box`}>
               <div class="relative lg:-mx-4 lg:flex lg:justify-start">
                 <div class="pt-10 lg:w-2/3 lg:flex-none lg:px-4 lg:pt-0" >
                   <h2 class="font-display text-2xl font-semibold text-slate-300" transition:name={`blog ${article.frontmatter.title} title`}>
