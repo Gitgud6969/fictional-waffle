@@ -6,7 +6,7 @@ description: How We Found Productivity without any Buzzwords
 date: "2023-09-24"
 ---
 
-## Navigating the Agile Tightrope in a High-Pressure Environment
+## Managing Agile Under Tight Deadlines
 
 In a landscape marked by tight deadlines and ever-growing feature lists, fully embracing Agile methodologies seemed like a lofty aspiration. It wasn't so much resistance to change as it was the immediate demands of our projects that made Agile appear less practical. We occasionally had to set aside ideal practices to meet urgent deadlines.
 
